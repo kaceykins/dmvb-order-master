@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DMVb Receipts</title>
+<link rel="stylesheet" href="assets/app.css"><link rel="stylesheet" href="assets/receipts.css">
+</head><body>
+<header class="dmvb-top"><img src="assets/logo.png" alt="DMV Beneficials"><b>DMVb RECEIPTS</b><nav><a href="admin.html">Design</a></nav></header>
+<div class="dmvb">
+<h1>Receipts &amp; Order List Master</h1>
+<p>Upload the orders CSV, the supplier CSV, or both. You get print-ready receipts and the Order List Master side by side to check before printing.</p>
+<div class="dmvb-card dmvb-wide">
+	<label for="m_csv">Orders CSV (orders by customer): makes the receipts and the master's order pages</label><input type="file" id="m_csv" accept=".csv,text/csv">
+	<label for="m_csv2">Supplier CSV (orders by product): makes the master's Supplier Order List</label><input type="file" id="m_csv2" accept=".csv,text/csv">
+	<p class="description">Orders only: the master shows product totals worked out from the orders. Supplier only: you get just the Supplier Order List page. Files are read in your browser and are not uploaded.</p>
+	<label for="m_sort">Sort receipts by</label>
+	<select id="m_sort"><option value="name">Customer name</option><option value="loc">Pickup location</option><option value="id">Order ID</option></select>
+	<p><button class="button button-primary" id="m_go">Refresh preview</button> <span id="m_msg" class="description"></span></p>
+</div>
+<div class="hide" id="m_view">
+	<div class="dmvb-both" id="bth"><b>Both documents:</b> <button class="button button-primary" id="bp" disabled>Print both</button> <button class="button" id="bd" disabled>Download combined PDF</button> <span class="mut">Receipts first, then the Order List Master, as one print job.</span></div>
+	<div class="dmvb-split">
+		<div id="pr"><div class="dmvb-pane"><h2>Receipts</h2>
+			<div class="dmvb-bar"><button class="button" id="rp" disabled>Print</button> <button class="button" id="rd" disabled>Download</button> <button class="button" id="rn" disabled>Open in new tab</button> <span class="mut" id="nr"></span></div>
+			<iframe id="fr" title="Receipts"></iframe></div></div>
+		<div><div class="dmvb-pane"><h2>Order List Master</h2>
+			<div class="dmvb-bar"><button class="button" id="mp" disabled>Print</button> <button class="button" id="md" disabled>Download</button> <button class="button" id="mn" disabled>Open in new tab</button> <span class="mut" id="nm"></span></div>
+			<iframe id="fm" title="Order List Master"></iframe></div></div>
+	</div>
+</div>
+</div>
+<script src="assets/vendor/jspdf.umd.min.js"></script>
+<script src="assets/vendor/papaparse.min.js"></script>
+<script src="assets/vendor/qrcode.min.js"></script>
+<script src="design.js"></script>
+<script src="assets/receipts.js"></script>
+<script src="assets/master.js"></script>
+<script src="assets/preview.js"></script>
+</body></html>

@@ -1,0 +1,16 @@
+*{box-sizing:border-box}
+body{margin:0;background:#f0f0f1;color:#1d2327;font:14px/1.5 Arial,Helvetica,sans-serif}
+.dmvb-top{background:#fff;border-bottom:3px solid #00d9ff;padding:10px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.dmvb-top img{height:44px}
+.dmvb-top b{font-size:16px;letter-spacing:.5px}
+.dmvb-top nav{margin-left:auto;display:flex;gap:14px}
+.dmvb-top a{color:#1d2327}
+.dmvb{padding:8px 24px 40px;max-width:1700px;margin:0 auto}
+.dmvb h1{font-size:22px;margin:16px 0 6px}
+.dmvb .button{border:1px solid #1d2327;background:#fff;color:#1d2327;border-radius:4px;padding:6px 12px;font:inherit;cursor:pointer}
+.dmvb .button:disabled{opacity:.45;cursor:default}
+.dmvb .button-primary{background:#1d2327;color:#fff}
+.dmvb input[type=text],.dmvb input[type=password],.dmvb select,.dmvb textarea{padding:6px 8px;border:1px solid #8c8f94;border-radius:4px;font:inherit}
+.dmvb .large-text{width:100%}.dmvb .regular-text{width:25em;max-width:100%}
+.dmvb .description{color:#646970}
+.dmvb code,.dmvb textarea.code{font-family:ui-monospace,Menlo,Consolas,monospace}

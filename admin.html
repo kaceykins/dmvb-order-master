@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DMVb Receipts: Design</title>
+<link rel="stylesheet" href="assets/app.css"><link rel="stylesheet" href="assets/receipts.css">
+</head><body>
+<header class="dmvb-top"><img src="assets/logo.png" alt="DMV Beneficials"><b>DMVb RECEIPTS</b><nav><a href="index.html">Back to receipts</a></nav></header>
+<div class="dmvb">
+<h1>Master design</h1>
+<p>Change the design here, preview it with sample orders, then click <b>Download design.js</b> and replace <code>design.js</code> in the site folder (commit it to GitHub). Everyone using the site then gets this design.</p>
+<div class="dmvb-card">
+	<label>Logo (between the QR codes)</label><div><img id="lp" alt=""> <input type="file" id="logo" accept="image/*"></div>
+	<label for="qr">Help QR code link (bottom left, labelled HELP)</label><input type="text" id="qr" class="large-text">
+	<label for="sq">Shop QR code link (bottom right, labelled SHOP)</label><input type="text" id="sq" class="large-text">
+	<label for="ch">Chapter name (printed under the logo, shown in capitals; leave blank to hide)</label><input type="text" id="ch" class="regular-text">
+	<label for="h1">Bold line above QR</label><input type="text" id="h1" class="large-text">
+	<label for="h2">Small line above QR</label><input type="text" id="h2" class="large-text">
+	<label for="fk">Footnote trigger word (found in a product name)</label><input type="text" id="fk" class="regular-text">
+	<label for="fn">Footnote text (shown in capitals, bold, with a star)</label><input type="text" id="fn" class="large-text">
+	<label for="ac">Table line colour</label><input type="color" id="ac">
+	<label for="rd">Footnote / star colour</label><input type="color" id="rd">
+	<label for="cl">Location colour palette: one #hex per line. Each CSV's pickup locations are sorted Z to A and given these colours in order (the list repeats if there are more locations than colours).</label><textarea id="cl" rows="10" class="large-text code"></textarea>
+	<label for="ru">Cleanup rules: one per line as <code>item||regex||replacement</code>. Scope is item, size or loc.</label><textarea id="ru" rows="14" class="large-text code"></textarea>
+	<p><button class="button button-primary" id="sv">Download design.js</button> <button class="button" id="ts">Preview with sample orders</button> <button class="button" id="rs">Reset text to defaults</button> <span id="am" class="description"></span></p>
+</div>
+</div>
+<script src="assets/vendor/jspdf.umd.min.js"></script>
+<script src="assets/vendor/papaparse.min.js"></script>
+<script src="assets/vendor/qrcode.min.js"></script>
+<script src="design.js"></script>
+<script src="assets/receipts.js"></script>
+</body></html>
